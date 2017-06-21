@@ -1,0 +1,11 @@
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+p {
+  padding: 10px;
+}
+li {
+  text-decoration: line-through;
+}

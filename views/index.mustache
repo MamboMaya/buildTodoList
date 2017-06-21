@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/main.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Here is Your Todo List</h1>
+      <form class="" action="index" method="post">
+        <input type="text" name="todo" value"" placeholder="Add a todo...">
+        <input type="submit" name="submit" value="Add todo">
+      </form>
+      {{#todos}}
+        <form class="" action="index" method="post">
+        <input type="submit" name"task" value="Make Complete">
+          <p>{{task}}</p>
+        </form>
+      {{/todos}}
+    <h3>Completed Tasks</h3>
+
+      <li>{{done}}</li>
+
+
+  </body>
+</html>
