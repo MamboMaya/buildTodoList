@@ -7,20 +7,24 @@
   </head>
   <body>
     <h1>Here is Your Todo List</h1>
-      <form class="" action="index" method="post">
-        <input type="text" name="todo" value"" placeholder="Add a todo...">
-        <input type="submit" name="submit" value="Add todo">
+      <form class="" action="/" method="post">
+        <input type="text" name="task" value"" placeholder="Add a task...">
+        <input type="submit" name="submit" value="Add task"> <br>
       </form>
-      {{#todos}}
-        <form class="" action="index" method="post">
-        <input type="submit" name"task" value="Make Complete">
-          <p>{{task}}</p>
+      {{#tasks}}
+        <form class="" action="/complete" method="post">
+        <button type="submit" name="done" value="{{dataValues.name}}">Completed</button>
+          <p>{{dataValues.name}}</p>
         </form>
-      {{/todos}}
+      {{/tasks}}
     <h3>Completed Tasks</h3>
-
-      <li>{{done}}</li>
-
-
+      <div class="donelist">
+        {{#completedTasks}}
+      <li>{{dataValues.name}}</li>
+        {{/completedTasks}}
+      </div>
+        <form class="" action="/delete" method="post">
+        <button type="submit" name="delete">Delete Completed</button>
+      </form>
   </body>
 </html>
