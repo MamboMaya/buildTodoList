@@ -58,28 +58,3 @@ app.post('/', function(req, res){
     res.redirect('/')
 
 });
-// app.post('/', function(req, res){
-//     var task = models.Task.build({
-//       name: req.body.task,
-//       completed: false
-//     })
-// })
-//
-// app.post('/complete', function(req, res){
-//     models.Task.findOne({
-//       where: {name: req.body.done}
-//     }).then( function(task){
-//       task.update({completed:true})
-//     }).then(function(){
-//       res.redirect('/')
-// })
-//
-// app.post('/delete', function(req, res){
-//   models.Task.findAll({where:{compelted:true}})
-//     .then(function(tasks){
-//       for (var i = 0; i < tasks.length; i++) {
-//         tasks[i].destroy().then(function(){
-//             res.redirect('/')
-//           })
-//         }
-// })
